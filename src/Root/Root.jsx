@@ -1,9 +1,14 @@
+import DarkModeToggle from "../components/DarkModeToggle/DarkModeToggle";
+import NavBar from "../components/NavBar/NavBar";
 
 const Root = () => {
     return (
-        <div className="text-3xl fone-bold">
-            this is come frome root componenet
-        </div>
+        <>
+        <NavBar />
+        <DarkModeToggle />
+      
+           
+        </>
     );
 };
 
