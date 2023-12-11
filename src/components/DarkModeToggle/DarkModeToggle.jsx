@@ -20,11 +20,11 @@ const DarkModeToggle = () => {
     return (
         <button onClick={toggleDarkBode}>
             {darkMode ? (
-                <div className="p-3 text-xl rounded-full hover:shadow-2xl text-[#9a9b9b] duration-300 hover:scale-110 ">
+                <div className=" text-lg  hover:shadow-2xl text-white duration-300 hover:scale-110 ">
                     <MdOutlineLightMode />
                 </div>
             ) : (
-                <div className="p-3 text-xl rounded-full hover:shadow-2xl text-[#343535] duration-300 hover:scale-110 hover:border">
+                <div className=" text-lg hover:shadow-2xl text-black duration-300 hover:scale-110 ">
                     <MdOutlineNightlight />
                 </div>
             )}
