@@ -10,7 +10,7 @@ import windowsIconLight from '../../assets/icons/windowsHomeLight.svg';
 import placeholderImage from '../../assets/images/placeholderImage.png';
 import EthernetIconLight from '../../assets/icons/EthernetIconLight.png';
 import EthernetIconDark from '../../assets/icons/EthernetIconDirk.png';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import DarkModeToggle from '../DarkModeToggle/DarkModeToggle';
 import SideBar from '../SideBar/SideBar';
 import TimeShow from '../TimeShow/TimeShow';
@@ -21,9 +21,8 @@ const NavBar = () => {
     const [searchText, setSearchText] = useState('');
     const [isSoundOff, setIsSoundOff] = useState(false);
     const [showRunningApp, setShowRunningApp] = useState(false);
-    const [isClickWindowBtn, setIsClickWindowBtn] = useState(false);
-
     const [showSideBar, setShowSideBar] = useState(false);
+    const [isClickWindowBtn, setIsClickWindowBtn] = useState(false);
 
     const handleSearchBox = (event) => {
         setSearchText(event.target.value);
@@ -59,7 +58,9 @@ const NavBar = () => {
                                 />
                             </figure>
 
-                            <MainWindowPopup />
+                            <MainWindowPopup
+                                isClickWindowBtn={isClickWindowBtn}
+                            />
                         </div>
                         <div className="w-fit h-fit relative">
                             <input
