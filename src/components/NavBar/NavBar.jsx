@@ -37,7 +37,7 @@ const NavBar = () => {
                     <div className="flex items-center">
                         <div className=" ">
                             <div
-                                className="hover:cursor-pointer p-3  w-fit group"
+                                className=" p-3 w-fit group"
                                 onClick={() =>
                                     setIsClickWindowBtn(!isClickWindowBtn)
                                 }>
