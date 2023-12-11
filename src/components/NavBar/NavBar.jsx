@@ -35,28 +35,33 @@ const NavBar = () => {
             text-black dark:text-white">
                 <div className="flex items-center justify-between">
                     <div className="flex items-center">
-                        <div
-                            onClick={() =>
-                                setIsClickWindowBtn(!isClickWindowBtn)
-                            }
-                            className="p-3  w-fit group hover:cursor-pointer">
-                            <figure className="w-[1.30rem] relative">
-                                <img
-                                    src={windowsIcon}
-                                    alt="Windows Icon"
-                                    className="text-black opacity-0 group-hover:opacity-100 duration-200 absolute z-[1] group-hover:z-[3] top-0 left-0"
-                                />
-                                <img
-                                    src={windowsIconDark}
-                                    alt="Windows Icon"
-                                    className="text-black hidden dark:block group-hover:opacity-0 duration-200"
-                                />
-                                <img
-                                    src={windowsIconLight}
-                                    alt="Windows Icon"
-                                    className="text-black block dark:hidden group-hover:opacity-0 duration-200"
-                                />
-                            </figure>
+                        <div className=" ">
+                            <div
+                                className="hover:cursor-pointer p-3  w-fit group"
+                                onClick={() =>
+                                    setIsClickWindowBtn(!isClickWindowBtn)
+                                }>
+                                <figure className="w-[1.30rem] relative">
+                                    <img
+                                        src={windowsIcon}
+                                        alt="Windows Icon"
+                                        className="text-black opacity-0 group-hover:opacity-100 duration-200 absolute z-[1] group-hover:z-[3] top-0 left-0"
+                                    />
+                                    <img
+                                        src={windowsIconDark}
+                                        alt="Windows Icon"
+                                        className="text-black hidden dark:block group-hover:opacity-0 duration-200"
+                                    />
+                                    <img
+                                        src={windowsIconLight}
+                                        alt="Windows Icon"
+                                        className="text-black block dark:hidden group-hover:opacity-0 duration-200"
+                                    />
+                                </figure>
+                                {isClickWindowBtn && (
+                                    <div className="fixed top-0 left-0 w-screen h-screen"></div>
+                                )}
+                            </div>
 
                             <MainWindowPopup
                                 isClickWindowBtn={isClickWindowBtn}
@@ -84,7 +89,9 @@ const NavBar = () => {
                                     className={`${
                                         isFocus
                                             ? 'text-black'
-                                            : 'dark:text-white text-black'
+                                            : searchText.length > 0
+                                            ? 'dark:text-white text-black'
+                                            : ''
                                     }`}
                                 />
                             </div>
